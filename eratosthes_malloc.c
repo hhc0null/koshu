@@ -6,6 +6,8 @@ int main(void) {
 
     scanf("%d", &limit);
     beg = (int *)calloc(sizeof(int), limit-1);
+    if(beg == NULL)
+        exit(EXIT_FAILURE);
     for(int i = 0; i < limit-1; i++)
         *(beg+i) = i+2;
 
